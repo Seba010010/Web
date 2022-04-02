@@ -1,0 +1,23 @@
+h1 {
+    font-family:  'Chelsea Market', cursiva;
+    font-size: 40px;
+    color: #8FD3E8;
+    text-align: center;
+
+}
+p{
+    font-family:  'Chelsea Market', cursiva;
+    font-size: 16px;
+    color: #8FD3E8;
+    text-align: center;
+
+}
+
+#span_celeste {
+    font-family:  'Chelsea Market', cursiva;
+    color: #8FD3E8;
+}
+#parrafo_span_pequeño {
+    color: grey
+
+}

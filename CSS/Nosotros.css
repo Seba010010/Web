@@ -1,0 +1,144 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+
+.mynav{
+    
+    background-color: white;
+    background-attachment: fixed;
+    block-size: 220px;
+}
+
+.navbar .navbar-nav{
+    margin:0 auto;
+    
+}
+
+
+.navbar-brand2{
+    
+    color:#8FD3E8;;
+    text-align:center;
+    
+
+}
+
+.navbar-brand3{
+    
+    color: aquamarine;
+    text-align: center;
+}
+
+.Icono{
+    
+    height: 50%;
+    
+}
+
+.a{
+    background-color: aliceblue;
+    width: auto;
+    height:500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+.Parrafo1{
+    
+    justify-content: center;
+    width: auto;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto; 
+     
+        
+}
+
+
+body {
+    background-color:white;
+    background-image: url("../IMG/Background1.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-attachment: scroll;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+        
+  }
+
+
+
+.navbar{
+    
+    background:scroll;
+    background-color: aliceblue;
+    text-anchor: middle;
+    
+    
+}
+
+.mynav2{
+
+    max-height: fit-content;
+    background-color: transparent !important;
+    width: 1200px;
+    height: 200px;
+    margin-left: auto;
+    margin-right: auto;
+    
+    
+}
+
+.navbar-brand2{
+
+    max-height: fit-content;
+    background-color: transparent !important;
+}
+
+
+.Nosotros1{
+    width: 224px;
+    height: 222px;
+    object-fit: cover;
+    align-items: center;
+    margin: 100px;
+    display: inline-block;
+    
+    
+}
+
+.Nosotros2{
+    width: 224px;
+    height: 222px;
+    object-fit: cover;
+    object-position: 50%;
+    margin: 100px;
+    display: inline-block;
+
+}
+
+.Nosotros3{
+    width: 224px;
+    height: 222px;
+    object-fit: cover;
+    object-position: 50%;
+    margin: 100px;
+    display: inline-block;
+
+ 
+}
+
+.Pie_pagina{
+    
+    background-color:#8FD3E8;
+    margin-bottom: auto;
+    height: 400px;
+
+}
+
