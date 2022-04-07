@@ -209,7 +209,7 @@ input[type=text], select, textarea {
 }
 
 
-body {
+#Body_index2 {
   background-color:white;
   background-image: url("../IMG/Background1.jpg");
   background-size: cover;
