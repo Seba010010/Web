@@ -2,6 +2,21 @@ let contadorClicks = 0;
 
 $(document).ready(function() {
 
+    $('#button_api_animales').click(function() {
+        $.get(`https://cat-fact.herokuapp.com/facts`, 
+            function(data) {
+                console.log(data)
+                
+                    $("#datos_animales").append("<ul><li>"+data[0].text+"</li><li>"+data[1].text+"</li><li>"+data[2].text+"</li><li>"+data[3].text+"</li></ul>");
+                    console.log(data[0].text);
+                    console.log(data[1].text);
+                    console.log(data[2].text);
+                    console.log(data[3].text);
+            })
+        
+    })
+
+
     
     $('#joinusName').focusout(function() {
         console.log("Sali del foco nombre")
