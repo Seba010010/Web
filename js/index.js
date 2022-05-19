@@ -7,7 +7,7 @@ $(document).ready(function() {
     $('#joinusName').focusout(function() {
         console.log("Sali del foco nombre")
 
-        if ($('#joinusName')[0].value == '' || $('#joinusName')[0].value == null) {
+        if ($('#joinusName')[0].value == '' || $('#joinusName')[0].value == ' ' || $('#joinusName')[0].value == null) {
             document.getElementsByName("joinusNameAlertName")[0].classList.remove('hide');
         } else {
             document.getElementsByName("joinusNameAlertName")[0].classList.add('hide');
