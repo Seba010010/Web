@@ -73,7 +73,7 @@ $(document).ready(function() {
     $('#joinusNameRegistro').focusout(function() {
         console.log("Sali del foco nombre")
 
-        if ($('#joinusNameRegistro')[0].value == '' || $('#joinusNameRegistro')[0].value == null) {
+        if ($('#joinusNameRegistro')[0].value == '' || $('#joinusName')[0].value.trim()== "" || $('#joinusNameRegistro')[0].value == null) {
             document.getElementsByName("joinusNameAlertNameRegistro")[0].classList.remove('hide');
         } else {
             document.getElementsByName("joinusNameAlertNameRegistro")[0].classList.add('hide');
