@@ -8,6 +8,7 @@ h1 {
 
 }
 p{
+    text-decoration: none;
     font-family:  'Chelsea Market', cursiva;
     font-size: 16px;
     color: #8FD3E8;
