@@ -9,8 +9,11 @@ h1 {
 }
 
 h1 a {
-  text-decoration: none;
-
+    text-decoration: none;
+    font-family:  'Chelsea Market', cursiva;
+    font-size: 40px;
+    color: #8FD3E8;
+    text-align: center;
 }
 p{
     text-decoration: none;
