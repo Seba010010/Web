@@ -4,7 +4,11 @@ $(document).ready(function () {
   $("#joinusName").focusout(function () {
     console.log("Sali del foco nombre");
 
-    if ($("#joinusName")[0].value == "" || $("#joinusName")[0].value == null) {
+    if (
+      $("#joinusName")[0].value == "" ||
+      $("#joinusName")[0].value.trim() == "" ||
+      $("#joinusName")[0].value == null
+    ) {
       document
         .getElementsByName("joinusNameAlertName")[0]
         .classList.remove("hide");
@@ -77,6 +81,7 @@ $(document).ready(function () {
 
       if (
         $("#joinusNameRegistro")[0].value == "" ||
+        $("#joinusNameRegistro")[0].value.trim() == "" ||
         $("#joinusNameRegistro")[0].value == null
       ) {
         document
@@ -130,15 +135,23 @@ $(document).ready(function () {
 
   $("#button_api_animales").click(function () {
     $.get(`https://cat-fact.herokuapp.com/facts`, function (data) {
-      const datos_animales = data.map((element) => {
-        return <li>{element.text}</li>;
-      });
+      console.log(data);
+
       $("#datos_animales").append(
-        <div>
-          <ul>{datos_animales}</ul>
-        </div>
+        "<ul><li>" +
+          data[0].text +
+          "</li><li>" +
+          data[1].text +
+          "</li><li>" +
+          data[2].text +
+          "</li><li>" +
+          data[3].text +
+          "</li></ul>"
       );
-      console.log("data: ", data);
+      console.log(data[0].text);
+      console.log(data[1].text);
+      console.log(data[2].text);
+      console.log(data[3].text);
     });
   });
 });
