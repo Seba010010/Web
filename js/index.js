@@ -1,142 +1,157 @@
-let  contadorClicks  =  0 ;
+let contadorClicks = 0;
 
-$ ( documento ) . listo ( función ( )  {
+$(document).ready(function () {
+  $("#joinusName").focusout(function () {
+    console.log("Sali del foco nombre");
 
+    if (
+      $("#joinusName")[0].value == "" ||
+      $("#joinusName")[0].value.trim() == "" ||
+      $("#joinusName")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertName")[0]
+        .classList.remove("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertName")[0]
+        .classList.add("hide");
+      console.log("1");
+    }
+  });
 
+  $("#joinusEmail").focusout(function () {
+    console.log("Sali del foco correo");
 
-    $ ( '#unirnosNombre' ) . enfoque ( función ( )  {
-        consola _ log ( "Sali del foco nombre" )
+    if (
+      $("#joinusEmail")[0].value == "" ||
+      $("#joinusEmail")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertCorreo")[0]
+        .classList.remove("hide");
 
-        if  ( $ ( '#joinusName' ) [ 0 ] . value  ==  ''  ||  $ ( '#joinusName' ) [ 0 ] . value . trim ( ) ==  ""   ||  $ ( '#joinusName' ) [ 0 ] .valor == nulo ) { _   
-            documento _ getElementsByName ( "joinusNameAlertName" ) [ 0 ] . listaclases . eliminar ( 'ocultar' ) ;
-        }  más  {
-            documento _ getElementsByName ( "joinusNameAlertName" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-            consola _ registro ( "1" )
-            
+      document
+        .getElementsByName("joinusNameAlertCorreoFormato")[0]
+        .classList.add("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertCorreo")[0]
+        .classList.add("hide");
+      console.log("2");
+      let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+      if (!regexEmail.test(joinusEmail.value)) {
+        document
+          .getElementsByName("joinusNameAlertCorreoFormato")[0]
+          .classList.remove("hide");
+      } else {
+        document
+          .getElementsByName("joinusNameAlertCorreoFormato")[0]
+          .classList.add("hide");
+      }
+    }
+  });
+
+  $("#comentarios").focusout(function () {
+    console.log("Sali del foco comentario");
+
+    if (
+      $("#comentarios")[0].value == "" ||
+      $("#comentarios")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertComentario")[0]
+        .classList.remove("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertComentario")[0]
+        .classList.add("hide");
+      console.log("mmmmmm");
+    }
+  });
+
+  $("#joinus").submit(function (event) {
+    console.log("Formulario enviado");
+    event.preventDefault();
+  });
+
+  $(document).ready(function () {
+    $("#joinusNameRegistro").focusout(function () {
+      console.log("Sali del foco nombre");
+
+      if (
+        $("#joinusNameRegistro")[0].value == "" ||
+        $("#joinusNameRegistro")[0].value.trim() == "" ||
+        $("#joinusNameRegistro")[0].value == null
+      ) {
+        document
+          .getElementsByName("joinusNameAlertNameRegistro")[0]
+          .classList.remove("hide");
+      } else {
+        document
+          .getElementsByName("joinusNameAlertNameRegistro")[0]
+          .classList.add("hide");
+        console.log("1");
+      }
+    });
+
+    $("#joinusEmailRegistro").focusout(function () {
+      console.log("Sali del foco correo");
+
+      if (
+        $("#joinusEmailRegistro")[0].value == "" ||
+        $("#joinusEmailRegistro")[0].value == null
+      ) {
+        document
+          .getElementsByName("joinusNameAlertCorreoRegistro")[0]
+          .classList.remove("hide");
+
+        document
+          .getElementsByName("joinusNameAlertCorreoFormatoRegistro")[0]
+          .classList.add("hide");
+      } else {
+        document
+          .getElementsByName("joinusNameAlertCorreoRegistro")[0]
+          .classList.add("hide");
+        console.log("2");
+        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+        if (!regexEmail.test(joinusEmailRegistro.value)) {
+          document
+            .getElementsByName("joinusNameAlertCorreoFormatoRegistro")[0]
+            .classList.remove("hide");
+        } else {
+          document
+            .getElementsByName("joinusNameAlertCorreoFormatoRegistro")[0]
+            .classList.add("hide");
         }
+      }
+    });
 
-        
-    } )
+    $("#joinusRegistro").submit(function (event) {
+      console.log("Formulario enviado");
+      event.preventDefault();
+    });
+  });
 
-    $ ( '#joinusEmail' ) . enfoque ( función ( )  {
-        consola _ log ( "Sali del foco correo" )
-        
-        
-        if  ( $ ( '#joinusEmail' ) [ 0 ] . value  ==  ''  ||  $ ( '#joinusEmail' ) [ 0 ] . value  ==  null )  {
-            documento _ getElementsByName ( "joinusNameAlertCorreo" ) [ 0 ] . listaclases . eliminar ( 'ocultar' ) ;
+  $("#button_api_animales").click(function () {
+    $.get(`https://cat-fact.herokuapp.com/facts`, function (data) {
+      console.log(data);
 
-            documento _ getElementsByName ( "joinusNameAlertCorreoFormato" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-            
-       
-
-        }  más  {
-            documento _ getElementsByName ( "joinusNameAlertCorreo" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-            consola _ registro ( "2" )
-            let  regexEmail  =  / ^ \w + ( [ \. - ] ? \w + ) * @ \w + ( [ \. - ] ? \w + ) * ( \. \w { 2,4 } ) + $ /
-            if ( ! regexEmail . prueba ( joinusEmail . valor ) ) {
-                documento _ getElementsByName ( "joinusNameAlertCorreoFormato" ) [ 0 ] . listaclases . eliminar ( 'ocultar' ) ;
-                    
-            } 
-            demás 
-            {
-                documento _ getElementsByName ( "joinusNameAlertCorreoFormato" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-                
-            }    
-    
-      
-            }
-     
-    } ) 
-
-    $ ( '#comentarios' ) . enfoque ( función ( )  {
-        consola _ log ( "Sali del foco comentario" )
-        
-        if  ( $ ( '#comentarios' ) [ 0 ] . valor  ==  ''  ||  $ ( '#comentarios' ) [ 0 ] . valor  ==  null )  {
-            documento _ getElementsByName ( "joinusNameAlertComentario" ) [ 0 ] . listaclases . eliminar ( 'ocultar' ) ;
-            
-        }  más  {
-            documento _ getElementsByName ( "joinusNameAlertComentario" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-            consola _ registro ( "mmmmmm" )
-            
-        }
-    } )   
-
-  
-    
-    $ ( '#únete' ) . enviar ( función ( evento )  {
-        
-        consola _ log ( "Formulario enviado" )
-        evento _ prevenirPredeterminado ( ) ;
-    } ) ;
-
-$ ( documento ) . listo ( función ( )  {
-    $ ( '#joinusNameRegistro' ) . enfoque ( función ( )  {
-        consola _ log ( "Sali del foco nombre" )
-
-        if  ( $ ( '#joinusNameRegistro' ) [ 0 ] . value  ==  ''  ||  $ ( '#joinusNameRegistro' ) [ 0 ] . value . trim ( ) ==  ""  ||  $ ( '#joinusNameRegistro' ) [ 0 ] .valor == nulo ) { _   
-            documento _ getElementsByName ( "joinusNameAlertNameRegistro" ) [ 0 ] . listaclases . eliminar ( 'ocultar' ) ;
-        }  más  {
-            documento _ getElementsByName ( "joinusNameAlertNameRegistro" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-            consola _ registro ( "1" )
-            
-        }
-
-        
-    } )
-
-    $ ( '#joinusEmailRegistro' ) . enfoque ( función ( )  {
-        consola _ log ( "Sali del foco correo" )
-        
-        
-        if  ( $ ( '#joinusEmailRegistro' ) [ 0 ] . value  ==  ''  ||  $ ( '#joinusEmailRegistro' ) [ 0 ] . value  ==  null )  {
-            documento _ getElementsByName ( "joinusNameAlertCorreoRegistro" ) [ 0 ] . listaclases . eliminar ( 'ocultar' ) ;
-
-            documento _ getElementsByName ( "joinusNameAlertCorreoFormatoRegistro" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-            
-       
-
-        }  más  {
-            documento _ getElementsByName ( "joinusNameAlertCorreoRegistro" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-            consola _ registro ( "2" )
-            let  regexEmail  =  / ^ \w + ( [ \. - ] ? \w + ) * @ \w + ( [ \. - ] ? \w + ) * ( \. \w { 2,4 } ) + $ /
-            if ( ! regexEmail . prueba ( joinusEmailRegistro . valor ) ) {
-                documento _ getElementsByName ( "joinusNameAlertCorreoFormatoRegistro" ) [ 0 ] . listaclases . eliminar ( 'ocultar' ) ;
-                    
-            } 
-            demás 
-            {
-                documento _ getElementsByName ( "joinusNameAlertCorreoFormatoRegistro" ) [ 0 ] . listaclases . añadir ( 'ocultar' ) ;
-                
-            }    
-    
-      
-            }
-     
-    } ) 
-
-  
-    
-    $ ( '#joinusRegistro' ) . enviar ( función ( evento )  {
-        
-        consola _ log ( "Formulario enviado" )
-        evento _ prevenirPredeterminado ( ) ;
-    } ) ;
-} )
-
-    $ ( '#button_api_animales' ) . haga clic en ( función ( )  {
-        $ . obtener ( `https://cat-fact.herokuapp.com/facts` , 
-            función ( datos )  {
-                consola _ registro ( datos )
-                
-                    $ ( "#datos_animales" ) . agregar ( "<ul><li>" + datos [ 0 ] . texto + "</li><li>" + datos [ 1 ] . texto + "</li><li>" + datos [ 2 ] . texto + "</li><li>" + datos [ 3 ] . texto + "</li></ul>" ) ;
-                    consola _ registro ( datos [ 0 ] . texto ) ;
-                    consola _ registro ( datos [ 1 ] . texto ) ;
-                    consola _ registro ( datos [ 2 ] . texto ) ;
-                    consola _ registro ( datos [ 3 ] . texto ) ;
-            } )
-        
-    } )
-
-   
-    
-} ) ;
+      $("#datos_animales").append(
+        "<ul><li>" +
+          data[0].text +
+          "</li><li>" +
+          data[1].text +
+          "</li><li>" +
+          data[2].text +
+          "</li><li>" +
+          data[3].text +
+          "</li></ul>"
+      );
+      console.log(data[0].text);
+      console.log(data[1].text);
+      console.log(data[2].text);
+      console.log(data[3].text);
+    });
+  });
+});
