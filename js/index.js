@@ -20,6 +20,70 @@ $(document).ready(function () {
     }
   });
 
+  
+  
+    $("#joinusNameLogin").focusout(function () {
+      console.log("Sali del foco nombre");
+  
+      if (
+        $("#joinusNameLogin")[0].value == "" ||
+        $("#joinusNameLogin")[0].value.trim() == "" ||
+        $("#joinusNameLogin")[0].value == null
+      ) {
+        document
+          .getElementsByName("joinusNameAlertNameLogin")[0]
+          .classList.remove("hide");
+      } else {
+        document
+          .getElementsByName("joinusNameAlertNameLogin")[0]
+          .classList.add("hide");
+        console.log("1");
+      }
+    });
+
+
+    $("#joinusNamePwdLogin").focusout(function () {
+      console.log("Sali del foco nombre");
+  
+      if (
+        $("#joinusNamePwdLogin")[0].value == "" ||
+        $("#joinusNamePwdLogin")[0].value.trim() == "" ||
+        $("#joinusNamePwdLogin")[0].value == null
+      ) {
+        document
+          .getElementsByName("joinusNameAlertPwdLogin")[0]
+          .classList.remove("hide");
+      } else {
+        document
+          .getElementsByName("joinusNameAlertPwdLogin")[0]
+          .classList.add("hide");
+        console.log("1");
+      }
+    });
+
+    $("#joinusNamePwdRegistro").focusout(function () {
+      console.log("Sali del foco nombre");
+  
+      if (
+        $("#joinusNamePwdRegistro")[0].value == "" ||
+        $("#joinusNamePwdRegistro")[0].value.trim() == "" ||
+        $("#joinusNamePwdRegistro")[0].value == null
+      ) {
+        document
+          .getElementsByName("joinusNameAlertPwdRegistro")[0]
+          .classList.remove("hide");
+      } else {
+        document
+          .getElementsByName("joinusNameAlertPwdRegistro")[0]
+          .classList.add("hide");
+        console.log("1");
+      }
+    });
+
+
+
+
+
   $("#joinusEmail").focusout(function () {
     console.log("Sali del foco correo");
 
