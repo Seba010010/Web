@@ -20,70 +20,6 @@ $(document).ready(function () {
     }
   });
 
-  
-  
-    $("#joinusNameLogin").focusout(function () {
-      console.log("Sali del foco nombre");
-  
-      if (
-        $("#joinusNameLogin")[0].value == "" ||
-        $("#joinusNameLogin")[0].value.trim() == "" ||
-        $("#joinusNameLogin")[0].value == null
-      ) {
-        document
-          .getElementsByName("joinusNameAlertNameLogin")[0]
-          .classList.remove("hide");
-      } else {
-        document
-          .getElementsByName("joinusNameAlertNameLogin")[0]
-          .classList.add("hide");
-        console.log("1");
-      }
-    });
-
-
-    $("#joinusNamePwdLogin").focusout(function () {
-      console.log("Sali del foco nombre");
-  
-      if (
-        $("#joinusNamePwdLogin")[0].value == "" ||
-        $("#joinusNamePwdLogin")[0].value.trim() == "" ||
-        $("#joinusNamePwdLogin")[0].value == null
-      ) {
-        document
-          .getElementsByName("joinusNameAlertPwdLogin")[0]
-          .classList.remove("hide");
-      } else {
-        document
-          .getElementsByName("joinusNameAlertPwdLogin")[0]
-          .classList.add("hide");
-        console.log("1");
-      }
-    });
-
-    $("#joinusNamePwdRegistro").focusout(function () {
-      console.log("Sali del foco nombre");
-  
-      if (
-        $("#joinusNamePwdRegistro")[0].value == "" ||
-        $("#joinusNamePwdRegistro")[0].value.trim() == "" ||
-        $("#joinusNamePwdRegistro")[0].value == null
-      ) {
-        document
-          .getElementsByName("joinusNameAlertPwdRegistro")[0]
-          .classList.remove("hide");
-      } else {
-        document
-          .getElementsByName("joinusNameAlertPwdRegistro")[0]
-          .classList.add("hide");
-        console.log("1");
-      }
-    });
-
-
-
-
-
   $("#joinusEmail").focusout(function () {
     console.log("Sali del foco correo");
 
@@ -139,62 +75,132 @@ $(document).ready(function () {
     event.preventDefault();
   });
 
-  $(document).ready(function () {
-    $("#joinusNameRegistro").focusout(function () {
-      console.log("Sali del foco nombre");
+  $("#joinusNameLogin").focusout(function () {
+    console.log("Sali del foco nombre");
 
-      if (
-        $("#joinusNameRegistro")[0].value == "" ||
-        $("#joinusNameRegistro")[0].value.trim() == "" ||
-        $("#joinusNameRegistro")[0].value == null
-      ) {
+    if (
+      $("#joinusNameLogin")[0].value == "" ||
+      $("#joinusNameLogin")[0].value.trim() == "" ||
+      $("#joinusNameLogin")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertNameLogin")[0]
+        .classList.remove("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertNameLogin")[0]
+        .classList.add("hide");
+      console.log("1");
+    }
+  });
+
+  $("#joinusNamePwdLogin").focusout(function () {
+    console.log("Sali del foco nombre");
+
+    if (
+      $("#joinusNamePwdLogin")[0].value == "" ||
+      $("#joinusNamePwdLogin")[0].value.trim() == "" ||
+      $("#joinusNamePwdLogin")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertPwdLogin")[0]
+        .classList.remove("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertPwdLogin")[0]
+        .classList.add("hide");
+      console.log("1");
+    }
+  });
+
+  $("#joinusNamePwdRegistro").focusout(function () {
+    console.log("Sali del foco nombre");
+
+    if (
+      $("#joinusNamePwdRegistro")[0].value == "" ||
+      $("#joinusNamePwdRegistro")[0].value.trim() == "" ||
+      $("#joinusNamePwdRegistro")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertPwdRegistro")[0]
+        .classList.remove("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertPwdRegistro")[0]
+        .classList.add("hide");
+      console.log("1");
+    }
+  });
+
+  $("#joinusNameUsuarioRegistro").focusout(function () {
+    console.log("Sali del foco nombre");
+
+    if (
+      $("#joinusNameUsuarioRegistro")[0].value == "" ||
+      $("#joinusNameUsuarioRegistro")[0].value.trim() == "" ||
+      $("#joinusNameUsuarioRegistro")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertNameUsuarioRegistro")[0]
+        .classList.remove("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertNameUsuarioRegistro")[0]
+        .classList.add("hide");
+      console.log("1");
+    }
+  });
+
+  $("#joinusEmailRegistro").focusout(function () {
+    console.log("Sali del foco correo");
+
+    if (
+      $("#joinusEmailRegistro")[0].value == "" ||
+      $("#joinusEmailRegistro")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertEmailRegistro")[0]
+        .classList.remove("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertEmailRegistro")[0]
+        .classList.add("hide");
+      console.log("2");
+      let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+      if (!regexEmail.test(joinusEmailRegistro.value)) {
         document
-          .getElementsByName("joinusNameAlertNameRegistro")[0]
+          .getElementsByName("joinusNameAlertEmailFormatoRegistro")[0]
           .classList.remove("hide");
       } else {
         document
-          .getElementsByName("joinusNameAlertNameRegistro")[0]
+          .getElementsByName("joinusNameAlertEmailFormatoRegistro")[0]
           .classList.add("hide");
-        console.log("1");
       }
-    });
+    }
+  });
 
-    $("#joinusEmailRegistro").focusout(function () {
-      console.log("Sali del foco correo");
+  $("#joinusContraseñaRegistro").focusout(function () {
+    console.log("Sali del foco nombre");
 
-      if (
-        $("#joinusEmailRegistro")[0].value == "" ||
-        $("#joinusEmailRegistro")[0].value == null
-      ) {
-        document
-          .getElementsByName("joinusNameAlertCorreoRegistro")[0]
-          .classList.remove("hide");
+    if (
+      $("#joinusContraseñaRegistro")[0].value == "" ||
+      $("#joinusContraseñaRegistro")[0].value.trim() == "" ||
+      $("#joinusContraseñaRegistro")[0].value == null
+    ) {
+      document
+        .getElementsByName("joinusNameAlertContraseñaRegistro")[0]
+        .classList.remove("hide");
+    } else {
+      document
+        .getElementsByName("joinusNameAlertContraseñaRegistro")[0]
+        .classList.add("hide");
+      console.log("1");
+    }
+  });
 
-        document
-          .getElementsByName("joinusNameAlertCorreoFormatoRegistro")[0]
-          .classList.add("hide");
-      } else {
-        document
-          .getElementsByName("joinusNameAlertCorreoRegistro")[0]
-          .classList.add("hide");
-        console.log("2");
-        let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
-        if (!regexEmail.test(joinusEmailRegistro.value)) {
-          document
-            .getElementsByName("joinusNameAlertCorreoFormatoRegistro")[0]
-            .classList.remove("hide");
-        } else {
-          document
-            .getElementsByName("joinusNameAlertCorreoFormatoRegistro")[0]
-            .classList.add("hide");
-        }
-      }
-    });
-
-    $("#joinusRegistro").submit(function (event) {
-      console.log("Formulario enviado");
-      event.preventDefault();
-    });
+  $("#joinusRegistro").submit(function (event) {
+    console.log("Formulario enviado");
+    event.preventDefault();
   });
 
   $("#button_api_animales").click(function () {

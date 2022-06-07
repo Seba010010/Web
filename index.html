@@ -32,17 +32,15 @@
             <h1 class="mt-5">Colitas </a></h1>
             <p class=" ">Tienda de accesorios para tus mascotas</p>
         </div>
-        <div class="col-lg-3 col-md-4 col-12">
-          <div class= row >
-            <p class="text-align center">Iniciar sesión.</p>
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo">
+        
+        <div class="col-lg-3 col-md-4 col-12 mt-4">
+          <div class="row">
+            
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1">
               Iniciar Sesión
               </button>
-              
-              <a href="InicioSesion.html">
-                <button type="button" class="btn btn-outline-primary"> Registrarme </a> </button>
 
-              <div class="offcanvas offcanvas-start" id="demo">
+              <div class="offcanvas offcanvas-start" id="demo1">
                 <div class="offcanvas-header">
                   <h1 class="offcanvas-title">Iniciar sesión</h1>
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
@@ -62,14 +60,86 @@
                           <input class="form-check-input" type="checkbox" name="Recuerdame"> Recuerdame
                         </label>
                       </div>
-                      <button type="Suscribirme" class="btn btn-primary">Ingresar</button>
+                      <button type="submit" class="btn btn-primary">Ingresar</button>
                       <br> <br>
                     </form>
-                    <a href="InicioSesion.html"> 
-                  <button class="btn btn-outline-primary" type="button">Crear Cuenta </a></button>
+                    
+                </div>
+              </div>
+          </div>
+          
+          <div class="row mt-3">
+            
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2">
+              Registrarme
+              </button>
+              
+                <!--<a href="InicioSesion.html">
+                <button type="button" class="btn btn-outline-primary"> Registrarme </a> </button> -->
+
+              <div class="offcanvas offcanvas-start" id="demo2">
+                <div class="offcanvas-header">
+                  <h1 class="offcanvas-title">Registrarme</h1>
+                  <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                  <form action="/action_page.php">
+                      <div class="mb-3 mt-3">
+                        <label for="email">Ingrese su nombre de usuario:</label>
+                        <input type="text" class="form-control" id="joinusNameUsuarioRegistro" placeholder="Ingrese su nombre de usuario"  size="200"  required>
+                        <div
+                          class="alert alert-danger hide"
+                          role="alert"
+                          name="joinusNameAlertNameUsuarioRegistro"
+                        >
+                          Debes rellenar el nombre
+                        </div>
+                      </div>
+
+                      <div class="mb-3">
+                        <label for="email">Ingrese su correo:</label>
+                        <input type="text" class="form-control" id="joinusEmailRegistro" placeholder="Ingrese su correo electronico"  size="200"  required>
+                        <div
+                          class="alert alert-danger hide"
+                          role="alert"
+                          name="joinusNameAlertEmailRegistro"
+                        >
+                          Debes rellenar el correo
+                        </div>
+                        <div
+                          class="alert alert-danger hide"
+                          role="alert"
+                          name="joinusNameAlertEmailFormatoRegistro"
+                        >
+                          Error de formato en el correo
+                        </div>
+                      </div>
+                      <div class="mb-3">
+                        <label for="email">Ingrese su contraseña:</label>
+                        <input type="password" class="form-control" id="joinusContraseñaRegistro" placeholder="Ingrese su contraseña"   size="200"  required>
+                        <div
+                          class="alert alert-danger hide"
+                          role="alert"
+                          name="joinusNameAlertContraseñaRegistro"
+                        >
+                          Debes rellenar la contraseña
+                        </div>
+                      </div>
+                
+                      </div>
+                      <div class="form-check mb-3">
+                        <label class="form-check-label">
+                          <input class="form-check-input" type="checkbox" name="Recuerdame"> Acepto terminos y condiciones
+                        </label>
+                      </div>
+                      <button type="submit" class="btn btn-primary" id="joinusRegistro">Registrarme</button>
+                      <br> <br>
+                    </form>
+                    
                 </div>
               </div>
           </div>                   
+        
         </div>
       </div>
     </header>
