@@ -394,6 +394,20 @@ body {
 }
 
 #imagen_login {
-  width: 90px;
-  height: 90px;
+  width: 65px;
+  height: 65px;
+}
+
+#btnlogin {
+  background-color: white;
+  border-color: #8fd3e8;
+  color: #8fd3e8;
+  font-weight: 700;
+}
+
+#btnregistro {
+  background-color: white;
+  border-color: #8fd3e8;
+  color: #8fd3e8;
+  font-weight: 700;
 }

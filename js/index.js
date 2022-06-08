@@ -198,7 +198,12 @@ $(document).ready(function () {
     }
   });
 
-  $("#joinusRegistro").submit(function (event) {
+  $("#formulariologin").submit(function (event) {
+    console.log("Formulario enviado");
+    event.preventDefault();
+  });
+
+  $("#formularioregistro").submit(function (event) {
     console.log("Formulario enviado");
     event.preventDefault();
   });

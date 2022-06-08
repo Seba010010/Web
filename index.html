@@ -40,7 +40,7 @@
           </div>
           <div class="row mt-3">
             
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo1" id="btnlogin">
               Iniciar Sesión
               </button>
 
@@ -50,14 +50,28 @@
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="/action_page.php">
+                  <form action="/action_page.php" id="formulariologin">
                       <div class="mb-3 mt-3">
-                        <label for="email">Ingrese su email:</label>
-                        <input type="Sesión" class="form-control" id="pwd" placeholder="Ingrese su E-mail" name="E-mail" pattern=".+@gmail\.com" size="30"  required>
+                        <label for="email">Ingrese su nombre de usuario:</label>
+                        <input type="Sesión" class="form-control" id="joinusNameLogin" placeholder="Ingrese su nombre de usuario" name="nombredeuduario"  size="200"  required>
+                        <div
+                          class="alert alert-danger hide"
+                          role="alert"
+                          name="joinusNameAlertNameLogin"
+                        >
+                          Debes ingresar el nombre de usuario
+                        </div>
                       </div>
                       <div class="mb-3">
                         <label for="pwd" class="form-label">Password:</label>
-                        <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pswd">
+                        <input type="password" class="form-control" id="joinusNamePwdLogin" placeholder="Enter password" name="pswd">
+                        <div
+                          class="alert alert-danger hide"
+                          role="alert"
+                          name="joinusNameAlertPwdLogin"
+                        >
+                          Debes ingresar la contraseña
+                        </div>
                       </div>
                       <div class="form-check mb-3">
                         <label class="form-check-label">
@@ -74,12 +88,9 @@
           
           <div class="row mt-3">
             
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2">
+            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#demo2" id="btnregistro">
               Registrarme
               </button>
-              
-                <!--<a href="InicioSesion.html">
-                <button type="button" class="btn btn-outline-primary"> Registrarme </a> </button> -->
 
               <div class="offcanvas offcanvas-start" id="demo2">
                 <div class="offcanvas-header">
@@ -87,7 +98,7 @@
                   <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
                 </div>
                 <div class="offcanvas-body">
-                  <form action="/action_page.php">
+                  <form action="/action_page.php" id="formularioregistro">
                       <div class="mb-3 mt-3">
                         <label for="email">Ingrese su nombre de usuario:</label>
                         <input type="text" class="form-control" id="joinusNameUsuarioRegistro" placeholder="Ingrese su nombre de usuario"  size="200"  required>
@@ -96,7 +107,7 @@
                           role="alert"
                           name="joinusNameAlertNameUsuarioRegistro"
                         >
-                          Debes rellenar el nombre
+                          Debes ingresar el nombre de usuario
                         </div>
                       </div>
 
@@ -108,7 +119,7 @@
                           role="alert"
                           name="joinusNameAlertEmailRegistro"
                         >
-                          Debes rellenar el correo
+                          Debes  ingresar el correo
                         </div>
                         <div
                           class="alert alert-danger hide"
@@ -126,7 +137,7 @@
                           role="alert"
                           name="joinusNameAlertContraseñaRegistro"
                         >
-                          Debes rellenar la contraseña
+                          Debes ingresar la contraseña
                         </div>
                       </div>
                 
